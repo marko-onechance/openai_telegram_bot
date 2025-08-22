@@ -2,6 +2,7 @@ from config import OPENAI_API_KEY
 from openai import AsyncOpenAI, OpenAIError
 import asyncio
 
+
 class OpenAiClient:
     def __init__(self):
         self._client = AsyncOpenAI(api_key=OPENAI_API_KEY)
@@ -17,14 +18,15 @@ class OpenAiClient:
             )
             return response.choices[0].message.content
         except OpenAIError as e:
-            # logging here some error
+            # logging here
             raise
+
 
 async def main():
     client = OpenAiClient()
-    reply = await client.ask("Hi, whats up? What is the capital of Japan?")
+    reply = await client.ask("Hi, whats up? What is the capital of Ukraine?")
     print(reply)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
-
