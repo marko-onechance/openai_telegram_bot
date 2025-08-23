@@ -22,7 +22,7 @@ Feel the full power of chatGPT assistant!
    ```bash
    python src/bot.py
    ```
-
+___
 ## Features
 
 - `/start` - Welcome message with main menu 
@@ -30,29 +30,48 @@ Feel the full power of chatGPT assistant!
 - `/gpt` - Direct GPT chat interface  
 - `/talk` - Personality-based conversations (Cobain, Hawking, Nietzsche, Queen, Tolkien)
 - `/quiz` - Quiz functionality (you can test your knowledge in various fields, such as: history, science, art, sports)
-
+___
 ## Requirements
 
 - Python 3.7+
 - Telegram Bot Token (from @BotFather)
 - OpenAI API Key
+___
+## :construction_worker: Examples of how the bot works
 
-## Screenshots
+### 1. command "_start_":
+![](screenshots/screenshot1.png)
 
-### - command "/start":
-![Знімок екрана 2025-08-23 о 21.59.45.png](../../../../Desktop/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-08-23%20%D0%BE%2021.59.45.png)
- 
-### - command "/random":
-![Знімок екрана 2025-08-23 о 22.02.15.png](../../../../../../var/folders/km/4gfqcl3s75zflzgffvhs09b40000gn/T/TemporaryItems/NSIRD_screencaptureui_MeIBmW/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-08-23%20%D0%BE%2022.02.15.png)
+---
 
-### - command "/gpt":
-![Знімок екрана 2025-08-23 о 22.03.26.png](../../../../../../var/folders/km/4gfqcl3s75zflzgffvhs09b40000gn/T/TemporaryItems/NSIRD_screencaptureui_hbAJdP/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-08-23%20%D0%BE%2022.03.26.png)
+### 2. command "/random":
+![](screenshots/screenshot2.png)
 
-### - command "/talk":
-![Знімок екрана 2025-08-23 о 22.04.24.png](../../../../../../var/folders/km/4gfqcl3s75zflzgffvhs09b40000gn/T/TemporaryItems/NSIRD_screencaptureui_kMs3hp/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-08-23%20%D0%BE%2022.04.24.png)
+---
 
-### - command "/quiz":
-![Знімок екрана 2025-08-23 о 22.05.46.png](../../../../../../var/folders/km/4gfqcl3s75zflzgffvhs09b40000gn/T/TemporaryItems/NSIRD_screencaptureui_7igwg8/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-08-23%20%D0%BE%2022.05.46.png)
+### 3. command "/gpt":
+![](screenshots/screenshot3.png)
+
+---
+
+### 4. command "/talk":
+![](screenshots/screenshot4.png)
+
+### - _I choose "Стівен Хокінг (Stephen Hawking)"_
+
+![](screenshots/screenshot4.1.png)
+
+---
+
+### 5. command "/quiz":
+![](screenshots/screenshot5.png)
+
+### - _I choose "Історія (History)"_
+
+![](screenshots/screenshot5.1.png)
 
 
-This is not a final version of the telegram-bot, and I will try to improve it in the future when I have more knowledge and skills :)
+___
+
+# :white_check_mark: This is not a final version of the telegram-bot, and I will try to improve it in the future when I have more knowledge and skills :)
+
