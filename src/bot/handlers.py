@@ -1,7 +1,8 @@
-from utils import load_messages_for_bot, load_prompt, get_image_path
+from src.utils import load_messages_for_bot, load_prompt, get_image_path
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ContextTypes
-from openapi_client import OpenAiClient
+from src.openapi_client import OpenAiClient
+import logging
 
 openai_client = OpenAiClient()
 

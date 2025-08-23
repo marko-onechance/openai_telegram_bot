@@ -1,7 +1,7 @@
-from config import TG_BOT_API_KEY
+from src.config import TG_BOT_API_KEY
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, CallbackQueryHandler, filters
 import logging
-from src import handlers
+from src.bot import handlers
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
