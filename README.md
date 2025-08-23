@@ -73,5 +73,5 @@ ___
 
 ___
 
-# :white_check_mark: This is not a final version of the telegram-bot, and I will try to improve it in the future when I have more knowledge and skills :)
+### :white_check_mark: This is not a final version of the telegram-bot, and I will try to improve it in the future when I have more knowledge and skills :)
 
