@@ -1,3 +1,5 @@
+https://img.shields.io/badge/open--ai--telegram--bot-red
+
 # OpenAI Telegram Bot
 
 Telegram bot that integrates with OpenAI to provide various interactive features including random facts, GPT chat interface, and personality-based conversations.
