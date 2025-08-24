@@ -1,4 +1,5 @@
-https://img.shields.io/badge/open--ai--telegram--bot-red
+![](https://img.shields.io/badge/open--ai--telegram--bot-red)  ![](https://img.shields.io/pypi/pyversions/python-telegram-bot?style=flat)
+
 
 # OpenAI Telegram Bot
 
