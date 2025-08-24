@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/open--ai--telegram--bot-white?style=for-the-badge&logo=probot) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-telegram-bot?style=for-the-badge&logo=Python&labelColor=white&color=white) ![Static Badge](https://img.shields.io/badge/Telegram-white?style=for-the-badge&logo=Telegram) ![Static Badge](https://img.shields.io/badge/ChatGPT-black?style=for-the-badge&logo=openai&labelColor=black&color=white)
+![Static Badge](https://img.shields.io/badge/open--ai--telegram--bot-white?style=for-the-badge&logo=probot&labelColor=black&color=white) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-telegram-bot?style=for-the-badge&logo=Python&labelColor=black&color=white) ![Static Badge](https://img.shields.io/badge/Telegram-white?style=for-the-badge&logo=Telegram&labelColor=black&color=white) ![Static Badge](https://img.shields.io/badge/ChatGPT-black?style=for-the-badge&logo=openai&labelColor=black&color=white)
 
 
 
