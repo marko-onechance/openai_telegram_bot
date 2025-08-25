@@ -6,14 +6,12 @@ import logging
 
 openai_client = OpenAiClient()
 
-
 async def start(update: Update, context: ContextTypes):
     text = load_messages_for_bot("main")
     image_path = get_image_path("main")
 
     with open(image_path, 'rb') as photo:
         await update.message.reply_photo(photo=photo, caption=text, parse_mode='Markdown')
-
 
 async def random_fact(update: Update, context: ContextTypes):
     text = load_messages_for_bot("random")
@@ -40,8 +38,7 @@ async def random_fact(update: Update, context: ContextTypes):
         logging.error(f"Error in random_fact: {e}")
         await update.message.reply_text("Вибачте, сталася помилка. Спробуйте пізніше.")
 
-
-async def gpt_interface(update: Update, context: ContextTypes):
+async def gpt_connection(update: Update, context: ContextTypes):
     text = load_messages_for_bot("gpt")
     image_path = get_image_path("gpt")
 
@@ -49,7 +46,6 @@ async def gpt_interface(update: Update, context: ContextTypes):
 
     with open(image_path, 'rb') as photo:
         await update.message.reply_photo(photo=photo, caption=text, parse_mode='Markdown')
-
 
 async def talk_with_personality(update: Update, context: ContextTypes):
     text = load_messages_for_bot("talk")
@@ -72,7 +68,6 @@ async def talk_with_personality(update: Update, context: ContextTypes):
             parse_mode='Markdown'
         )
 
-
 async def quiz_game(update: Update, context: ContextTypes):
     text = load_messages_for_bot("quiz")
     image_path = get_image_path("quiz")
@@ -92,7 +87,6 @@ async def quiz_game(update: Update, context: ContextTypes):
             reply_markup=reply_markup,
             parse_mode='Markdown'
         )
-
 
 async def handle_text_messages(update: Update, context: ContextTypes):
     user_mode = context.user_data.get('mode', '')
@@ -151,7 +145,6 @@ async def handle_text_messages(update: Update, context: ContextTypes):
             except Exception as e:
                 logging.error(f"Error in quiz mode: {e}")
                 await update.message.reply_text("Вибачте, сталася помилка. Спробуйте пізніше.")
-
 
 async def handle_callback(update: Update, context: ContextTypes):
     query = update.callback_query
@@ -233,3 +226,25 @@ async def handle_callback(update: Update, context: ContextTypes):
         except Exception as e:
             logging.error(f"Error in quiz: {e}")
             await query.edit_message_caption("Вибачте, сталася помилка. Спробуйте пізніше.")
+
+    elif query.data.startswith('translate_'):
+        lang = query.data.split('_')[1]
+        context.user_data['mode'] = f'translate_{lang}'
+
+        await query.message.reply_text(
+            f"Режим перекладу активований! Пишіть будь-що, і я перекладу на {lang.upper()}.\n\n"
+            "Натисніть 'Закінчити', щоб вийти."
+        )
+
+async def translate_mode(update: Update, context: ContextTypes):
+    text = "Оберіть мову для перекладу:"
+    keyboard = [
+        [InlineKeyboardButton("Англійська", callback_data='translate_en')],
+        [InlineKeyboardButton("Німецька", callback_data='translate_de')],
+        [InlineKeyboardButton("Іспанська", callback_data='translate_es')],
+        [InlineKeyboardButton("Французька", callback_data='translate_fr')],
+        [InlineKeyboardButton("Закінчити", callback_data='finish')]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await update.message.reply_text(text, reply_markup=reply_markup)
+
