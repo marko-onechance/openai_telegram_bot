@@ -125,7 +125,7 @@ async def handle_text_messages(update: Update, context: ContextTypes):
                 gpt_response = await openai_client.ask(check_prompt,
                                                        "Ти експерт з квізів. Перевіряй відповіді користувачів.")
 
-                is_correct = "так" in gpt_response.lower() or "правильн" in gpt_response.lower()
+                is_correct = "так" in gpt_response.lower() or "правильно" in gpt_response.lower()
                 if is_correct:
                     context.user_data['score'] = score + 1
 
@@ -145,6 +145,16 @@ async def handle_text_messages(update: Update, context: ContextTypes):
             except Exception as e:
                 logging.error(f"Error in quiz mode: {e}")
                 await update.message.reply_text("Вибачте, сталася помилка. Спробуйте пізніше.")
+
+    elif user_mode.startswith('translate_'):
+        lang = user_mode.split('_')[1]
+        try:
+            prompt = f"Переклади наступний текст українською мовою на {lang.upper()}:"
+            gpt_response = await openai_client.ask(user_text, prompt)
+            await update.message.reply_text(gpt_response)
+        except Exception as e:
+            logging.error(f"Error in translate mode: {e}")
+            await update.message.reply_text("Помилка при перекладі. Спробуйте пізніше.")
 
 async def handle_callback(update: Update, context: ContextTypes):
     query = update.callback_query
