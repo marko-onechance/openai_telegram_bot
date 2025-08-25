@@ -25,7 +25,7 @@ Feel the full power of chatGPT assistant!
    ```bash
    python src/bot/bot.py
    ```
-___
+
 ## ✨ Features
 
 - `/start` - welcome message with main menu 
@@ -35,14 +35,12 @@ ___
 - `/quiz` - quiz functionality (you can test your knowledge in various fields, such as: history, science, art, sports)
 - `/translate` - functionality that allows you to translate any word into several different languages
 
-___
-
 ## ❗ Requirements
 
 - Python 3.8+
 - Telegram Bot Token (from @BotFather)
 - OpenAI API Key
-___
+
 ## 👷 Examples of how the bot works
 
 ### 1. command `/start`:
@@ -51,23 +49,17 @@ ___
 
 ![](src/resources/screenshots/screenshot1.png)
 
----
-
 ### 2. command `/random`:
 
 - _this functionality provides the ability to generate any random fact_
 
 ![](src/resources/screenshots/screenshot2.png)
 
----
-
 ### 3. command `/gpt`:
 
 - _this functionality allows you to ask anything in the chatGPT_
 
 ![](src/resources/screenshots/screenshot3.png)
-
----
 
 ### 4. command `/talk`:
 
@@ -79,8 +71,6 @@ _this functionality allows you to ask anything to several famous personalities_
 
 ![](src/resources/screenshots/screenshot4.1.png)
 
----
-
 ### 5. command `/quiz`:
 
 - _this functionality provides the opportunity to test knowledge in several different fields (history, science, art, sports)_
@@ -90,8 +80,6 @@ _this functionality allows you to ask anything to several famous personalities_
 - _I choose "Історія (History)"_
 
 ![](src/resources/screenshots/screenshot5.1.png)
-
-___
 
 ### 6. command `/translate`:
  
@@ -103,4 +91,4 @@ ___
 
 ![](src/resources/screenshots/screenshot6.1.png)
 
-This is not a final version of the bot, I will improve it in the future!
+_This is not a final version of the bot, I will improve it in the future!_
