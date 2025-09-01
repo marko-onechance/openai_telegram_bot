@@ -1,5 +1,7 @@
 ![Static Badge](https://img.shields.io/badge/open--ai--telegram--bot-white?style=for-the-badge&logo=probot&logoColor=blue&labelColor=black&color=white) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-telegram-bot?style=for-the-badge&logo=Python&logoColor=blue&labelColor=black&color=white) ![Static Badge](https://img.shields.io/badge/Telegram-white?style=for-the-badge&logo=Telegram&logoColor=blue&labelColor=black&color=white) ![Static Badge](https://img.shields.io/badge/ChatGPT-black?style=for-the-badge&logo=openai&logoColor=blue&labelColor=black&color=white)
 
+![Header](assets/header.html)
+
 # 🤖 OpenAI Telegram Bot
 
 Telegram bot that integrates with OpenAI to provide various interactive features including random facts, GPT chat interface, words translate and personality-based conversations.

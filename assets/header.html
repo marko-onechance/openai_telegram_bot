@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Telegram Bot Header</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #2c2c2c;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            width: 800px;
+            height: 200px;
+            background: linear-gradient(135deg, #87ceeb 0%, #b0e0e6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            transform: rotate(-30deg);
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #2c2c2c;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            position: relative;
+        }
+
+        .emoji-container {
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .duck {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle at 30% 30%, #ffd700, #ffb347);
+            border-radius: 50%;
+            position: relative;
+            margin-right: 20px;
+            box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .duck::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 15px;
+            height: 15px;
+            background: #2c2c2c;
+            border-radius: 50%;
+            box-shadow: 45px 0 0 #2c2c2c;
+        }
+
+        .duck::after {
+            content: '';
+            position: absolute;
+            top: 65px;
+            left: 45px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid #ff6347;
+            border-right: 15px solid #ff6347;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+        }
+
+        .characters {
+            display: flex;
+            gap: 10px;
+        }
+
+        .character {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .character:nth-child(1) {
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+            animation-delay: 0s;
+        }
+
+        .character:nth-child(2) {
+            background: linear-gradient(45deg, #32cd32, #228b22);
+            animation-delay: 0.3s;
+        }
+
+        .character:nth-child(3) {
+            background: linear-gradient(45deg, #4169e1, #1e90ff);
+            animation-delay: 0.6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .glow {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
+            border-radius: 17px;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.7;
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="glow"></div>
+        <div class="title">ChatGPT Telegram Bot</div>
+        <div class="emoji-container">
+            <div class="duck"></div>
+            <div class="characters">
+                <div class="character">🤖</div>
+                <div class="character">💬</div>
+                <div class="character">✨</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
